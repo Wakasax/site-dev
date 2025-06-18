@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: url('assets/sky-mountains.jpg') no-repeat center center/cover;
+    color: #F5F5F5;
+    min-height: 100vh;
+}
+header {
+    background: rgba(75, 0, 130, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav h1 {
+    font-family: 'Anime Ace', sans-serif;
+    color: #DDA0DD;
+    font-size: 1.8rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #FFB6C1;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.login-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.login-card h2 {
+    font-family: 'Anime Ace', sans-serif;
+    color: #DDA0DD;
+    margin-bottom: 20px;
+}
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    background: #FFB6C1;
+    color: #333;
+    font-size: 1rem;
+}
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+.login-options a {
+    color: #ADD8E6;
+    text-decoration: none;
+}
+.login-options a:hover {
+    text-decoration: underline;
+}
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #4B0082;
+    color: #F5F5F5;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #6A0DAD;
+}
+.create-account {
+    display: block;
+    margin-top: 10px;
+    color: #ADD8E6;
+    text-decoration: none;
+}
+.create-account:hover {
+    text-decoration: underline;
+}
+footer {
+    background: rgba(75, 0, 130, 0.3);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
