@@ -21,21 +21,26 @@
     </header>
     <main>
         <section id="home" class="center">
-            <div class="login-card">
-                <h2>Login</h2>
-                <input type="text" placeholder="Username" class="input-field">
-                <input type="password" placeholder="Password" class="input-field">
-                <div class="login-options">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#">forgot password</a>
-                </div>
-                <button class="btn">Login</button>
-                <a href="#" class="create-account">Create Account</a>
+            <div class="welcome-card">
+                <h2>Bem-vindo à sua ideia favorita</h2>
+                <p>Comece seus maravilhosos projetos aqui <3</p>
+                <button class="btn" onclick="openEditor()">Iniciar Idea</button>
+            </div>
+        </section>
+        <section id="editor" class="editor-section hidden">
+            <div class="editor-container">
+                <textarea id="code-editor"></textarea>
+                <button class="btn" onclick="closeEditor()">Fechar</button>
             </div>
         </section>
     </main>
     <footer>
         <p>© 2025 - Luna Idea</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/java/java.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.css">
+    <script src="js/script.js"></script>
 </body>
 </html>
