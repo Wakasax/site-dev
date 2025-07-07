@@ -1,46 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luna Idea - Minecraft & Anime</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Anime+Ace&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KC7 IDE Web</title>
+  <link rel="stylesheet" href="style/main.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #252526;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .sidebar button {
+      background: #007acc;
+      border: none;
+      color: white;
+      padding: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      cursor: pointer;
+      margin-bottom: 5px;
+      padding: 5px;
+      background-color: #3c3c3c;
+    }
+    .editor-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .toolbar {
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .toolbar select, .toolbar button {
+      background: #007acc;
+      border: none;
+      color: white;
+      padding: 8px;
+    }
+    .editor {
+      flex: 1;
+      background-color: #1e1e1e;
+      padding: 10px;
+      outline: none;
+      white-space: pre;
+      font-family: monospace;
+      overflow-y: auto;
+    }
+    .console {
+      background-color: #121212;
+      color: #00ff88;
+      padding: 10px;
+      height: 150px;
+      overflow-y: auto;
+      border-top: 1px solid #333;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Luna Idea</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#snippets">Snippets</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="center">
-            <div class="welcome-card">
-                <h2>Bem-vindo à sua ideia favorita</h2>
-                <p>Comece seus maravilhosos projetos aqui <3</p>
-                <button class="btn" onclick="openEditor()">Iniciar Idea</button>
-            </div>
-        </section>
-        <section id="editor" class="editor-section hidden">
-            <div class="editor-container">
-                <textarea id="code-editor"></textarea>
-                <button class="btn" onclick="closeEditor()">Fechar</button>
-            </div>
-        </section>
+  <div id="app">
+    <aside class="sidebar">
+      <h1>KC7 IDE</h1>
+      <button>+ Novo Arquivo</button>
+      <ul>
+        <li>main.lua</li>
+      </ul>
+    </aside>
+    <main class="editor-container">
+      <div class="toolbar">
+        <select>
+          <option>Lua</option>
+          <option>JavaScript</option>
+          <option>Python</option>
+          <option>HTML</option>
+          <option>CSS</option>
+        </select>
+        <button>▶️ Run</button>
+        <button>Copiar Código</button>
+      </div>
+      <div class="editor" contenteditable="true">
+-- Escreva seu código aqui...
+      </div>
+      <div class="console">
+Console pronto.
+      </div>
     </main>
-    <footer>
-        <p>© 2025 - Luna Idea</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/java/java.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.css">
-    <script src="js/script.js"></script>
+  </div>
 </body>
 </html>
