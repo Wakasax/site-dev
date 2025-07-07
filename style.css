@@ -49,44 +49,28 @@ body{
     margin: 0;
 }
 
-.code-editor {
+.textfield{
     display: flex;
-    background: #232234;
-    border-radius: 10px;
-    box-shadow: 0 4px 32px #0003;
-    min-height: 350px;
-    max-width: 700px;
-    margin: 20px 0 0 0;
-    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
 }
 
-.line-numbers {
-    background: #1a1a28;
-    color: #616178;
-    text-align: right;
-    padding: 18px 12px 0 12px;
-    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', monospace;
-    font-size: 1.08rem;
-    user-select: none;
-    border-radius: 10px 0 0 10px;
-}
-
-.line-numbers span {
-    display: block;
-    height: 1.7em;
-}
-
-.code-editor textarea {
-    background: transparent;
-    color: #b9ffe4;
-    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', monospace;
-    font-size: 1.07rem;
+.textfield > input{
+    width: 100%;
     border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
     outline: none;
-    resize: none;
-    width: 540px;
-    padding: 18px 15px 0 15px;
-    min-height: 350px;
-    border-radius: 0 10px 10px 0;
-    line-height: 1.7em;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: #f0f0f0;
+    margin-bottom: 10px;
 }
