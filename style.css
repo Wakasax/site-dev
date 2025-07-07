@@ -6,4 +6,19 @@ body {
     height: 100vh;
     background: #201b2c;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-main{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-main > h1 {
+    color: #77ffc0;
 }
