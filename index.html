@@ -1,143 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Luna IDEA Web</title>
-  <!-- Link do CSS será adicionado por você -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Idea</title>
 </head>
 <body>
-  <div class="main-layout">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <span class="sidebar-logo">🌙</span>
-        <span class="sidebar-title">Luna IDEA</span>
-      </div>
-      <nav class="sidebar-nav">
-        <div class="nav-section">
-          <div class="nav-label">PROJETO</div>
-          <ul class="project-tree">
-            <li class="tree-folder open">
-              <span class="icon-folder"></span> workspace
-              <ul>
-                <li class="tree-file selected"><span class="icon-lua"></span> exemplo.lua</li>
-                <li class="tree-file"><span class="icon-js"></span> script.js</li>
-                <li class="tree-file"><span class="icon-md"></span> README.md</li>
-                <li class="tree-folder">
-                  <span class="icon-folder"></span> src
-                  <ul>
-                    <li class="tree-file"><span class="icon-lua"></span> main.lua</li>
-                    <li class="tree-file"><span class="icon-ts"></span> index.ts</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
+    <div class="main">
+        <div class="left-main">
+            <h1>Luna Idea<br>Seu Idea favorito S2</h1>
         </div>
-        <div class="nav-section">
-          <div class="nav-label">ATALHOS</div>
-          <ul class="shortcuts">
-            <li><span class="icon-mc"></span> Plugin Minecraft</li>
-            <li><span class="icon-roblox"></span> Script Roblox</li>
-            <li><span class="icon-mobile"></span> App Mobile</li>
-          </ul>
-        </div>
-      </nav>
-      <div class="sidebar-footer">
-        <div class="user-bar">
-          <span class="user-avatar">👾</span>
-          <span class="user-name">wakasa</span>
-        </div>
-      </div>
-    </aside>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <section class="content">
-      <!-- ABAS -->
-      <div class="tabs">
-        <div class="tab active"><span class="icon-lua"></span> exemplo.lua <span class="close">×</span></div>
-        <div class="tab"><span class="icon-js"></span> script.js <span class="close">×</span></div>
-        <div class="tab"><span class="icon-md"></span> README.md <span class="close">×</span></div>
-      </div>
-      <!-- EDITOR -->
-      <div class="editor-area">
-        <div class="editor-header">
-          <span class="editor-title">exemplo.lua</span>
-          <span class="editor-status">● editando</span>
-        </div>
-        <div class="editor">
-<textarea spellcheck="false">// Exemplo de código Lua
-print('Olá, Luna IDEA!')
-
--- Use a estrutura à esquerda para navegar entre arquivos!
-        </textarea>
-        </div>
-      </div>
-      <!-- TERMINAL -->
-      <div class="terminal">
-        <div class="terminal-header">
-          <span class="terminal-title">Terminal</span>
-          <span class="terminal-status">● Online</span>
-        </div>
-        <div class="terminal-body">
-$ Bem-vindo ao Luna IDEA Web!<br>
-$ <span class="terminal-cursor"></span>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ÍCONES SVG EMBUTIDOS -->
-  <svg style="display:none">
-    <symbol id="icon-folder" viewBox="0 0 24 24">
-      <path fill="#bfbfbf" d="M10 4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6z"/>
-    </symbol>
-    <symbol id="icon-lua" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10" fill="#4877b1"/>
-      <circle cx="16.5" cy="7.5" r="3" fill="#fff"/>
-    </symbol>
-    <symbol id="icon-js" viewBox="0 0 24 24">
-      <rect width="22" height="22" x="1" y="1" rx="4" fill="#f7e018" stroke="#e6c700" stroke-width="2"/>
-      <text x="6" y="18" font-size="12" font-family="monospace" fill="#323330">JS</text>
-    </symbol>
-    <symbol id="icon-md" viewBox="0 0 24 24">
-      <rect width="22" height="22" x="1" y="1" rx="4" fill="#44475a" stroke="#6d8faf" stroke-width="2"/>
-      <text x="4" y="18" font-size="11" font-family="monospace" fill="#8be9fd">MD</text>
-    </symbol>
-    <symbol id="icon-ts" viewBox="0 0 24 24">
-      <rect width="22" height="22" x="1" y="1" rx="4" fill="#3178c6" stroke="#235893" stroke-width="2"/>
-      <text x="4" y="18" font-size="11" font-family="monospace" fill="#fff">TS</text>
-    </symbol>
-    <symbol id="icon-mc" viewBox="0 0 24 24">
-      <rect width="22" height="22" x="1" y="1" rx="4" fill="#5f7140" stroke="#8d9e60" stroke-width="2"/>
-      <text x="3" y="18" font-size="12" font-family="monospace" fill="#bada55">MC</text>
-    </symbol>
-    <symbol id="icon-roblox" viewBox="0 0 24 24">
-      <rect width="22" height="22" x="1" y="1" rx="4" fill="#f7f7f7" stroke="#b0b0b0" stroke-width="2"/>
-      <text x="1" y="18" font-size="13" font-family="monospace" fill="#111">RBX</text>
-    </symbol>
-    <symbol id="icon-mobile" viewBox="0 0 24 24">
-      <rect x="6" y="2" width="12" height="20" rx="3" fill="#50fa7b"/>
-      <circle cx="12" cy="19" r="1.2" fill="#282a36"/>
-    </symbol>
-  </svg>
-  <script>
-    // Substitui spans .icon-* pelo SVG inline correspondente
-    function svgIcon(className, symbol) {
-      document.querySelectorAll('.' + className).forEach(el => {
-        el.innerHTML = `<svg width="18" height="18" style="vertical-align:middle"><use href="#${symbol}"></use></svg>`;
-      });
-    }
-    svgIcon('icon-folder', 'icon-folder');
-    svgIcon('icon-lua', 'icon-lua');
-    svgIcon('icon-js', 'icon-js');
-    svgIcon('icon-md', 'icon-md');
-    svgIcon('icon-ts', 'icon-ts');
-    svgIcon('icon-mc', 'icon-mc');
-    svgIcon('icon-roblox', 'icon-roblox');
-    svgIcon('icon-mobile', 'icon-mobile');
-  </script>
+        <div class="right-main"></div>
+    </div>    
 </body>
 </html>
