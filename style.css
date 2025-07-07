@@ -2,7 +2,6 @@
 
 body{
     margin: 0;
-    font-family: "Noto Sans", sans-serif;
 }
 .main-idea{
     width: 100vw;
@@ -24,6 +23,10 @@ body{
 
 .left-main > h1{
     color: #77ffc0;
+}
+
+.left-image{
+    width: 35vw;
 }
 
 .right-main{
