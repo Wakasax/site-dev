@@ -1,122 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luna IDEA</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e1e1e;
-      color: #d4d4d4;
-      display: flex;
-      height: 100vh;
-    }
-    .sidebar {
-      width: 220px;
-      background-color: #252526;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-    }
-    .sidebar h1 {
-      font-size: 18px;
-      color: #9cdcfe;
-      margin-bottom: 12px;
-    }
-    .sidebar button {
-      background: #0e639c;
-      border: none;
-      color: white;
-      padding: 8px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    .sidebar li {
-      cursor: pointer;
-      padding: 6px 8px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-      background-color: #3c3c3c;
-    }
-    .sidebar li:hover {
-      background-color: #505050;
-    }
-    .editor-container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .toolbar {
-      background-color: #333333;
-      padding: 10px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .toolbar select, .toolbar button {
-      background: #0e639c;
-      border: none;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 3px;
-      font-size: 14px;
-    }
-    .editor {
-      flex: 1;
-      background-color: #1e1e1e;
-      padding: 10px;
-      outline: none;
-      white-space: pre;
-      font-family: 'Consolas', monospace;
-      font-size: 14px;
-      overflow-y: auto;
-      color: #dcdcdc;
-    }
-    .console {
-      background-color: #1a1a1a;
-      color: #00ff88;
-      padding: 10px;
-      height: 150px;
-      overflow-y: auto;
-      border-top: 1px solid #333;
-      font-family: 'Consolas', monospace;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Luna IDEA Web</title>
+  <link rel="stylesheet" href="style/idea-dark.css" />
 </head>
 <body>
-  <div id="app">
+  <div class="main-layout">
     <aside class="sidebar">
-      <h1>Luna IDEA</h1>
-      <button>+ Novo Arquivo</button>
-      <ul>
-        <li>main.lua</li>
+      <div class="project-title">Projeto Luna</div>
+      <ul class="project-tree">
+        <li class="tree-folder open">
+          <span class="icon folder"></span> workspace
+          <ul>
+            <li class="tree-file"><span class="icon lua"></span> exemplo.lua</li>
+          </ul>
+        </li>
       </ul>
     </aside>
-    <main class="editor-container">
-      <div class="toolbar">
-        <select>
-          <option>Lua</option>
-          <option>JavaScript</option>
-          <option>Python</option>
-          <option>HTML</option>
-          <option>CSS</option>
-        </select>
-        <button>▶️ Run</button>
-        <button>Copiar Código</button>
+    <section class="content">
+      <div class="tabs">
+        <div class="tab active"><span class="icon lua"></span> exemplo.lua <span class="close">×</span></div>
       </div>
-      <div class="editor" contenteditable="true">
--- Escreva seu código aqui...
+      <div class="editor">
+        <textarea spellcheck="false">// Exemplo de código Lua\nprint('Olá, Luna IDEA!')</textarea>
       </div>
-      <div class="console">
-Console pronto.
+      <div class="terminal">
+        <div class="terminal-header">Terminal</div>
+        <div class="terminal-body">
+          $ Bem-vindo ao Luna IDEA Web!
+        </div>
       </div>
-    </main>
+    </section>
   </div>
 </body>
 </html>
