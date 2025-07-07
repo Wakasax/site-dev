@@ -24,7 +24,8 @@
         <div class="tab active"><span class="icon lua"></span> exemplo.lua <span class="close">×</span></div>
       </div>
       <div class="editor">
-        <textarea spellcheck="false">// Exemplo de código Lua\nprint('Olá, Luna IDEA!')</textarea>
+        <textarea spellcheck="false">// Exemplo de código Lua
+print('Olá, Luna IDEA!')</textarea>
       </div>
       <div class="terminal">
         <div class="terminal-header">Terminal</div>
@@ -34,5 +35,25 @@
       </div>
     </section>
   </div>
+
+  <!-- Ícones embutidos como SVG para pasta e Lua -->
+  <svg style="display:none">
+    <symbol id="icon-folder" viewBox="0 0 24 24">
+      <path fill="#bfbfbf" d="M10 4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6z"/>
+    </symbol>
+    <symbol id="icon-lua" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="#4877b1"/>
+      <circle cx="16.5" cy="7.5" r="3" fill="#fff"/>
+    </symbol>
+  </svg>
+  <script>
+    // Substitui spans .icon pelo SVG inline correspondente
+    document.querySelectorAll('.icon.folder').forEach(el => {
+      el.innerHTML = '<svg width="18" height="18"><use href="#icon-folder"></use></svg>';
+    });
+    document.querySelectorAll('.icon.lua').forEach(el => {
+      el.innerHTML = '<svg width="18" height="18"><use href="#icon-lua"></use></svg>';
+    });
+  </script>
 </body>
 </html>
