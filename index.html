@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Luna IDEA Web</title>
-  <link rel="stylesheet" href="style/idea-dark.css"/>
+  <!-- Link do CSS será adicionado por você -->
 </head>
 <body>
   <div class="main-layout">
@@ -62,12 +62,18 @@
         <div class="tab"><span class="icon-md"></span> README.md <span class="close">×</span></div>
       </div>
       <!-- EDITOR -->
-      <div class="editor">
+      <div class="editor-area">
+        <div class="editor-header">
+          <span class="editor-title">exemplo.lua</span>
+          <span class="editor-status">● editando</span>
+        </div>
+        <div class="editor">
 <textarea spellcheck="false">// Exemplo de código Lua
 print('Olá, Luna IDEA!')
 
 -- Use a estrutura à esquerda para navegar entre arquivos!
-      </textarea>
+        </textarea>
+        </div>
       </div>
       <!-- TERMINAL -->
       <div class="terminal">
@@ -118,7 +124,7 @@ $ <span class="terminal-cursor"></span>
     </symbol>
   </svg>
   <script>
-    // Função para trocar spans por SVGs embutidos
+    // Substitui spans .icon-* pelo SVG inline correspondente
     function svgIcon(className, symbol) {
       document.querySelectorAll('.' + className).forEach(el => {
         el.innerHTML = `<svg width="18" height="18" style="vertical-align:middle"><use href="#${symbol}"></use></svg>`;
